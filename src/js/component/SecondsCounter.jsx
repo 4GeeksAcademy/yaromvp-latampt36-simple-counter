@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-const SecondsCounter = ({ seconds }) => {
+const Clock = ({ seconds }) => {
     const digits = seconds.toString().padStart(6, '0').split('').map(Number);
 
     return (
         <div className="d-flex justify-content-center align-items-center bg-black text-white p-3">
-            <div className="d-flex justify-content-center align-items-center bg-dark rounded-3 mx-1" style={{ width: '80px', height: '80px' }}>
+            <div className="d-flex justify-content-center align-items-center bg-dark rounded-3 mx-1"
+                style={{ width: '80px', height: '80px' }}>
                 <i className="fas fa-clock fa-3x"></i>
             </div>
             {digits.map((digit, index) => (
-                <div key={index} className="d-flex justify-content-center align-items-center bg-dark rounded-3 mx-1" style={{ width: '60px', height: '80px' }}>
+                <div key={index} className="d-flex justify-content-center align-items-center bg-dark rounded-3 mx-1"
+                    style={{ width: '60px', height: '80px' }}>
                     <h1 className="display-5 mb-0">{digit}</h1>
                 </div>
             ))}
@@ -17,7 +19,7 @@ const SecondsCounter = ({ seconds }) => {
     );
 };
 
-export const App = () => {
+export const SecondsCounter = () => {
     const [seconds, setSeconds] = useState(0);
 
     useEffect(() => {
@@ -28,5 +30,5 @@ export const App = () => {
         return () => clearInterval(interval);
     }, []);
 
-    return <SecondsCounter seconds={seconds} />;
+    return <Clock seconds={seconds} />;
 };

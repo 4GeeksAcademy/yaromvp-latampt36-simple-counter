@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+/*
+import React, { useState, useEffect } from 'react';
 import { Timer } from './Timer';
 import { Countdown } from './Countdown';
 import { Alert } from './Alert';
 
 export const Options = (props) => {
 
-    const handleClick = (e) => {
+    const clickOptions = (e) => {
         props.setShowOptions(
             (prev) => {
                 return !prev;
@@ -15,7 +16,7 @@ export const Options = (props) => {
 
     return (
         <div className="contariner d-flex flex-column justify-content-center align-items-center">
-            <button type="button" className={`btn btn-${props.showOptions ? "secondary" : "primary"} mb-3`} onClick={handleClick}>{props.showOptions ? "Hide Options" : "Show Options"}</button>
+            <button type="button" className={`btn btn-${props.showOptions ? "secondary" : "primary"} mb-3`} onClick={clickOptions}>{props.showOptions ? "Hide Options" : "Show Options"}</button>
 
             <div className={`accordion accordion-flush ${props.showOptions ? "" : "d-none"}`} id="accordionFlushExample" style={{ width: '35%' }}>
                 <div className="accordion-item">
@@ -25,7 +26,7 @@ export const Options = (props) => {
                         </button>
                     </h2>
                     <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <Timer />
+                        <Timer restart2={restart2} setRestart2={setRestart2} />
                     </div>
                 </div>
                 <div className="accordion-item">
@@ -53,3 +54,4 @@ export const Options = (props) => {
 
     )
 }
+    */
